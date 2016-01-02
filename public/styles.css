@@ -10,7 +10,7 @@
 .balloon:before {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: 0px;
   left: 50%;
   margin-left: -10px;
   width: 0;
