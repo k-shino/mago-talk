@@ -1,6 +1,6 @@
 # mago-talk
 
-# Installing on raspaas
+## Installing on raspaas
 
 ```
 sudo apt-get update
