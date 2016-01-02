@@ -5,6 +5,8 @@ require "rubygems"
 require "sinatra"
 require "sinatra/reloader"
 
+set :bind, '0.0.0.0'
+
 helpers do
   include Rack::Utils; alias_method :h, :escape_html
 end
