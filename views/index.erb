@@ -2,9 +2,12 @@
 
 
 <form action='./' method='POST'>
-<input type='text' name='name'>
+<input type='text' name='text'>
 <input type='submit' value='送信'>
+<input type="hidden" name="mode" value= "<%= @body["mode"] %>">
+<input type="hidden" name="context" value= "<%= @body["context"] %>">
 </form>
+
 
 <div class="balloon">
 <%= @body["utt"] %>
