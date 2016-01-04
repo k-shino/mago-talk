@@ -16,7 +16,7 @@ mkdir raspaas
 cd raspaas
 wget http://raw.github.com/tetsusat/raspaas/master/bootstrap.sh
 chmod +x bootstrap.sh
-
+cd
 
 # Cloning mago-talk
 git clone https://github.com/k-shino/mago-talk.git
