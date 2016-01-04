@@ -9,7 +9,7 @@ chmod +x ./mago-talk/setup.sh
 ./mago-talk/setup.sh
 
 sudo ./raspaas/bootstrap.sh paas
-cd ./mago-talk/
+cd ./mago-talk/app/
 paas create
 git push paas master
 ```
