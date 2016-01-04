@@ -1,1 +1,1 @@
-web: bundle exec ruby docomoru.rb -p 5000
+web: bundle exec ruby mago-talk.rb -p 5000
