@@ -13,9 +13,9 @@ end
 
 get '/' do
 	client = Docomoru::Client.new(api_key: "376f5479654d35514574463155363475396c4d6661694f6866576e556c487a5a7669356b394a795068472f")
-	response = client.create_dialogue("明けましておめでとう")
+	response = client.create_dialogue("こんにちは")
     @title = "title"
-	@body = ""
+	@body = response.body
 	erb :index
 end
 
