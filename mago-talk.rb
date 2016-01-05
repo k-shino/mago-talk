@@ -4,6 +4,7 @@ require "docomoru/version"
 require "rubygems"
 require "sinatra"
 require "sinatra/reloader"
+require "socket"
 
 set :bind, '0.0.0.0'
 
