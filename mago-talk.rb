@@ -14,11 +14,22 @@ end
 
 get '/' do
 	client = Docomoru::Client.new(api_key: "376f5479654d35514574463155363475396c4d6661694f6866576e556c487a5a7669356b394a795068472f")
-	response = client.create_dialogue("こんにちは", {"age" => "2","t" => "30"})
 
-@ip = Socket.getifaddrs.select{|x|
-  x.name == "eth0" and x.addr.ipv4?
-}.first.addr.ip_address
+	ip = Socket.getifaddrs.select{|x|
+	  x.name == "eth0" and x.addr.ipv4?
+	}.first.addr.ip_address
+	
+	seed1 = '172.17.0.7'
+	if seed1.eql?(ip) then
+		tnum = 30
+	elsif	seed2.eql?(ip) then
+		tnum = 20
+	else
+		tnum = 0
+	end
+
+        response = client.create_dialogue("こんにちは", {"age" => "2","t" => tnum})
+
 
     @title = container = `hostname` || 'unknown'
 	@body = response.body
@@ -32,7 +43,7 @@ post '/' do
 
     @ip=Socket.getifaddrs.select{|x|
       x.name == "eth0" and x.addr.ipv4?
-    }
+    }.first.addr.ip_address
 
     @title = container = `hostname` || 'unknown'
     @body = response.body
