@@ -25,16 +25,18 @@ get '/' do
 	seed2 = '172.17.0.8'
 	if seed1.eql?(ip) then
 		tnum = 30
+		@color = 'black'
 	elsif	seed2.eql?(ip) then
 		tnum = 20
+		@color = 'white'
 	else
 		tnum = 0
+		@color = 'white'
 	end
 
         response = client.create_dialogue("こんにちは", {"age" => "2","t" => tnum})
 
-
-    @title = container = `hostname` || 'unknown'
+   	 @title = container = `hostname` || 'unknown'
 	@body = response.body
 	erb :index
 end
