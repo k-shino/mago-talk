@@ -22,6 +22,7 @@ get '/' do
 	@ip = ip
 
 	seed1 = '172.17.0.7'
+	seed2 = '172.17.0.8'
 	if seed1.eql?(ip) then
 		tnum = 30
 	elsif	seed2.eql?(ip) then
