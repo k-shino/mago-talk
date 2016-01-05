@@ -18,14 +18,12 @@ get '/' do
 	ip = Socket.getifaddrs.select{|x|
 	  x.name == "eth0" and x.addr.ipv4?
 	}.first.addr.ip_address
-	
-	@ip = ip
 
 	seed1 = '172.17.0.7'
 	seed2 = '172.17.0.8'
 	if seed1.eql?(ip) then
 		tnum = 30
-		@color = 'black'
+		@color = 'pink'
 	elsif	seed2.eql?(ip) then
 		tnum = 20
 		@color = 'white'
@@ -36,7 +34,7 @@ get '/' do
 
         response = client.create_dialogue("こんにちは", {"age" => "2","t" => tnum})
 
-   	 @title = container = `hostname` || 'unknown'
+   	@title = container = `hostname` || 'unknown'
 	@body = response.body
 	erb :index
 end
@@ -44,11 +42,25 @@ end
 
 post '/' do
 	client = Docomoru::Client.new(api_key: "376f5479654d35514574463155363475396c4d6661694f6866576e556c487a5a7669356b394a795068472f")
-	response = client.create_dialogue(params[:text], {"mode" => params[:mode], "context" => params[:context], "t" => "30"})
 
-    @ip=Socket.getifaddrs.select{|x|
-      x.name == "eth0" and x.addr.ipv4?
-    }.first.addr.ip_address
+        ip = Socket.getifaddrs.select{|x|
+          x.name == "eth0" and x.addr.ipv4?
+        }.first.addr.ip_address
+
+        seed1 = '172.17.0.7'
+        seed2 = '172.17.0.8'
+        if seed1.eql?(ip) then
+                tnum = 30
+                @color = 'pink'
+        elsif   seed2.eql?(ip) then
+                tnum = 20
+                @color = 'white'
+        else
+                tnum = 0
+                @color = 'white'
+        end
+
+	response = client.create_dialogue(params[:text], {"mode" => params[:mode], "context" => params[:context], "t" => tnum})
 
     @title = container = `hostname` || 'unknown'
     @body = response.body
