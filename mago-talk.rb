@@ -19,6 +19,8 @@ get '/' do
 	  x.name == "eth0" and x.addr.ipv4?
 	}.first.addr.ip_address
 	
+	@ip = ip
+
 	seed1 = '172.17.0.7'
 	if seed1.eql?(ip) then
 		tnum = 30
