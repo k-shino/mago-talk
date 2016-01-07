@@ -26,8 +26,6 @@
 * OSはubuntu
 * セキュリティルール インバウンドのHTTP通信を許可
 
----
-
 ![Alt Text](./fig1.png)
 
 ---
@@ -46,8 +44,6 @@ $ ./setup.sh
 * docker PaaS(tetsusat氏作成)のダウンロード
 * mago-talkプログラムのダウンロード
 
----
-
 ![Alt Text](./fig2.png)
 
 ---
@@ -61,13 +57,6 @@ $ sudo ./raspaas/bootstrap.sh mago-talk
 ## やってること
 
 * docker PaaSでサービス起動
- * nginx(LoadBalancer)の起動
- * gitreceive(gitフック)
- * Consul / Consul Template
- * registrator
- * Docker Compose
-
----
 
 ![Alt Text](./fig3.png)
 
