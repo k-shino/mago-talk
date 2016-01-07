@@ -26,6 +26,8 @@
 * OSはubuntu
 * セキュリティルール インバウンドのHTTP通信を許可
 
+---
+
 ![Alt Text](./fig1.png)
 
 ---
