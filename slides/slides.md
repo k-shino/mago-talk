@@ -26,6 +26,8 @@
 * OSはubuntu
 * セキュリティルール インバウンドのHTTP通信を許可
 
+![Alt Text](./fig1.png)
+
 ---
 
 # セットアップ
@@ -36,7 +38,7 @@ $ chmod +x ./setup.sh
 $ ./setup.sh
 ```
 
-### やってること
+## やってること
 
 * dockerのインストール
 * docker PaaS(tetsusat氏作成)のダウンロード
@@ -50,11 +52,14 @@ $ ./setup.sh
 $ sudo ./raspaas/bootstrap.sh mago-talk
 ```
 
-### やってること
+## やってること
 
 * docker PaaSでサービス起動
  * nginx(LoadBalancer)の起動
- * registratorの起動
+ * gitreceive(gitフック)
+ * Consul / Consul Template
+ * registrator
+ * Docker Compose
 
 ---
 
