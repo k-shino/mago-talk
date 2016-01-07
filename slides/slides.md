@@ -21,19 +21,26 @@
 
 # 環境の用意
 
-#### ・ サーバ借りるところから
-#### ・ AWS EC2を使用
-
+* サーバ借りるところから
+* AWS EC2を使用
 * OSはubuntu
 * セキュリティルール インバウンドのHTTP通信を許可
 
 ---
 
 # セットアップ
-  git入れて
-  1つリポジトリをcloneして実行します
-  その間に説明
-  dfckerのインストールと、2つのリポジトリのcloneをしてます
+
+```(.sh)
+wget https://github.com/k-shino/mago-talk/raw/master/setup.sh
+chmod +x ./setup.sh
+./setup.sh
+```
+
+### やってること
+
+* dockerのインストール
+* docker PaaS(tetsusat氏作成)のダウンロード
+* mago-talkプログラムのダウンロード
 
 ---
 
