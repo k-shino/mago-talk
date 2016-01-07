@@ -8,7 +8,7 @@
 
 # モチベーション
 
-* <p class="fragment">paas勉強会で知った技術を使ってみたい</p>
+* <p class="fragment">PaaS勉強会で知った技術を使ってみたい</p>
 * <p class="fragment">ruby触ってみたい</p>
 * <p class="fragment">MAGONIAかわいい</p>
 
@@ -19,7 +19,12 @@
 
 ---
 
-# EC2借ります
+# 環境の用意
+
+## ・ サーバ借りるところから
+## ・ AWS EC2を使用
+
+
   ubuntu。cloudnでもいけるかも。未確認
   セキュリティルールをいじる
 
