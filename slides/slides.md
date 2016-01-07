@@ -93,6 +93,7 @@ $ git push mago-talk master
 
 * 雑談
 * スケール
+* モニタ(Consul)
 
 ```sh
 $ mago-talk scale web=3
