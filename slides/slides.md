@@ -97,6 +97,8 @@ $ git push mago-talk master
 * MVCフレームワークとしてSinatraを使用
 * Ajaxでバックグラウンド更新
 
+![Alt Text](./fig4.png)
+
 ---
 
 # できること
@@ -112,8 +114,6 @@ $ mago-talk scale web=3
 
 ---
 
-![Alt Text](./fig4.png)
-
----
+# 最終形
 
 ![Alt Text](./fig5.png)
