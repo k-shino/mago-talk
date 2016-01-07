@@ -1,16 +1,51 @@
 <h2>mago-talk</h2>
 
 
-<form action='./' method='POST'>
-<input type='text' name='text'>
-<input type='submit' value='送信'>
-<input type="hidden" name="mode" value= "<%= @body["mode"] %>">
-<input type="hidden" name="context" value= "<%= @body["context"] %>">
-</form>
+<div class="comment-form">
+    <input type='text' id='message' name='text'>
+    <input id='submit-comment' type='button' value='送信'>
+    <div id='params'>
+        <input type="hidden" id="mode" name="mode" value= "<%= @body["mode"] %>">
+        <input type="hidden" id="context" name="context" value= "<%= @body["context"] %>">
+    </div>
+</div>
 
 <%= @ip %>
-<div class="balloon">
+<div class="balloon" id="comment">
 <%= @body["utt"] %>
 </div>
 <img src="logo.png" width="400px" style="background-color:<%= @color %>;" />
+<div id="comments">
+<p>json : <%= escape_html @comment %></p>
+</div>
+
 <br/><br/>
+
+  <script type="text/javascript">
+    function escapeHTML(s) {
+      return $('<div>').text(s).html();
+    }
+    $(function(){
+      $("#submit-comment").click(function(){
+        var comment = $("#message").val();
+        var mode = $("#mode").val();
+        var context = $("#context").val();
+
+        var request = $.ajax({
+          type: "POST",
+          url: "/comment",
+          data: {
+            body: comment,
+            mode:  mode,
+            context:  context
+          },
+          dataType: 'json'
+        }).done(function(res){
+            $("#comment").html(escapeHTML(res.body));
+            $("#params").html("<input type='hidden' id='mode' name='mode' value= '" + res.mode +"'>"
+                              + "<input type='hidden' id='mode' name='context' value= '" + res.context +"'>"
+                              );
+        });
+      });
+    });
+  </script>

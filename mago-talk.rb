@@ -5,6 +5,7 @@ require "rubygems"
 require "sinatra"
 require "sinatra/reloader"
 require "socket"
+require "json"
 
 set :bind, '0.0.0.0'
 
@@ -42,11 +43,14 @@ get '/' do
 
    	@title = container = `hostname` || 'unknown'
 	@body = response.body
+
+    @comment = JSON.generate({"body" => response.body})
+
 	erb :index
 end
 
 
-post '/' do
+post '/comment' do
 	client = Docomoru::Client.new(api_key: d_api)
 
         ip = Socket.getifaddrs.select{|x|
@@ -65,10 +69,14 @@ post '/' do
                 @color = 'white'
         end
 
-	response = client.create_dialogue(params[:text], {"mode" => params[:mode], "context" => params[:context], "t" => tnum})
+	response = client.create_dialogue(params[:body], {"mode" => params[:mode], "context" => params[:context], "t" => tnum})
 
     @title = container = `hostname` || 'unknown'
     @body = response.body
-    erb :index
+
+    @res = JSON.pretty_generate({:body => response.body["utt"],
+                          :mode => response.body["mode"],
+                          :context => response.body["context"]
+                          })
 end
 
