@@ -99,9 +99,9 @@ $ mago-talk scale web=3
 ```
 * <p class="fragment">時々変なのが紛れ込みます</p>
 
-<img src="./mago1.png" height="80px" \>
-<img src="./monit.png" height="80px" \>
-<img src="./mago2.png" height="80px" class="fragment" \>
+<img src="./mago1.png" height="200px" \>
+<img src="./monit.png" height="200px" \>
+<img src="./mago2.png" height="200px" class="fragment" \>
 
 ---
 
