@@ -58,7 +58,7 @@ $ sudo ./raspaas/bootstrap.sh mago-talk
 
 * docker PaaSでサービス起動
 
-![Alt Text](./fig3.png)
+<img src="./fig3.png" height=80% \>
 
 ---
 
