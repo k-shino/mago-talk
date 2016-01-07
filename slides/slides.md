@@ -97,16 +97,16 @@ $ git push mago-talk master
 * MVCフレームワークとしてSinatraを使用
 * Ajaxでバックグラウンド更新
 
+---
+
 # できること
 
 * 雑談
-* <p class="fragment">スケール
+* スケール
 
 ```sh
 $ mago-talk scale web=3
 ```
-
-</p>
 
 * <p class="fragment">時々変なのが紛れ込みます</p>
 
