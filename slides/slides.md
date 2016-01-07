@@ -90,10 +90,6 @@ $ git push mago-talk master
 
 ---
 
-![Alt Text](./fig4.png)
-
----
-
 # mago-talkアプリの概要
 
 * ruby + javascriptで実装
@@ -104,13 +100,19 @@ $ git push mago-talk master
 # できること
 
 * 雑談
-* <p class="fragment">スケール</p>
+* <p class="fragment">スケール
 
 ```sh
 $ mago-talk scale web=3
 ```
 
+</p>
+
 * <p class="fragment">時々変なのが紛れ込みます</p>
+
+---
+
+![Alt Text](./fig4.png)
 
 ---
 
