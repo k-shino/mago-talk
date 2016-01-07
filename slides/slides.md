@@ -74,12 +74,43 @@ $ sudo ./raspaas/bootstrap.sh mago-talk
 ---
 
 # アプリのデプロイ
-     フォルダ移動、create、push
-     やってること 言語の確認、rubyのdockrイメージのダウンロード、dockerfile自動生成、デプロイ
+
+```sh
+$ cd ./mago-talk/
+$ mago-talk create
+$ git push mago-talk master
+```
+
+## やってること
+
+* git push (gitreceiveでフック)
+* pushされたアプリケーションの言語を判断し、ruby環境のdockerイメージを取得 (buildpack-like)
+* dockerイメージ上でアプリケーションの実行環境を構築(bundle install)
+* dockerコンテナ起動、nginxと接続 (registrator, Consul)
 
 ---
 
 ![Alt Text](./fig4.png)
+
+---
+
+# mago-talkアプリの概要
+
+* ruby + javascriptで実装
+* 雑談対話はdocomo API（四七さんといっしょ）
+* MVCフレームワークとしてSinatraを使用
+* Ajaxでバックグラウンド更新
+
+# できること
+
+* 雑談
+* <p class="fragment">スケール</p>
+
+```sh
+$ mago-talk scale web=3
+```
+
+* <p class="fragment">時々変なのが紛れ込みます</p>
 
 ---
 
