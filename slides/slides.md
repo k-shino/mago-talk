@@ -93,11 +93,10 @@ $ git push mago-talk master
 
 * 雑談
 * スケール
-* モニタ(Consul)
-
 ```sh
 $ mago-talk scale web=3
 ```
+* モニタ(Consul)
 * <p class="fragment">時々変なのが紛れ込みます</p>
 
 <img src="./mago1.png" height="200px" \>
