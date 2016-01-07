@@ -4,17 +4,13 @@
 
 2016.1.8
 
-1. <p class="fragment">これが（[内部リンク](#/4/1)）</p>
-1. <p class="fragment">順に</p>
-1. <p class="fragment">表示</p>
-
 ---
 
 # モチベーション
 
-* paas勉強会で知った技術を使ってみたい
-* ruby触ってみたい
-* MAGONIAかわいい
+* <p class="fragment">paas勉強会で知った技術を使ってみたい</p>
+* <p class="fragment">ruby触ってみたい</p>
+* <p class="fragment">MAGONIAかわいい</p>
 
 ---
 
