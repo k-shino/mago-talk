@@ -1,9 +1,3 @@
-
-				<section data-markdown
-					 data-separator="\n---\n$"
-					 data-vertical="\n--\n">
-				<script type="text/template">
-
 # しゃべるMAGONIA on docker PaaS
 
 @sinohara
@@ -87,6 +81,3 @@
      音声発話 ドコモで出来そう
      Q&A対応
 
-
-				</script>
-</section>
