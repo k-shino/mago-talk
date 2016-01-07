@@ -48,6 +48,10 @@ $ ./setup.sh
 
 ---
 
+![Alt Text](./fig2.png)
+
+---
+
 # サービスの起動
 
 ```sh
@@ -65,9 +69,17 @@ $ sudo ./raspaas/bootstrap.sh mago-talk
 
 ---
 
+![Alt Text](./fig3.png)
+
+---
+
 # アプリのデプロイ
      フォルダ移動、create、push
      やってること 言語の確認、rubyのdockrイメージのダウンロード、dockerfile自動生成、デプロイ
+
+---
+
+![Alt Text](./fig4.png)
 
 ---
 
@@ -80,6 +92,10 @@ $ sudo ./raspaas/bootstrap.sh mago-talk
 ---
 
 # システム全体の絵
+
+![Alt Text](./fig5.png)
+
+---
 
  振り返り イカ背景
 
