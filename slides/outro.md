@@ -3,7 +3,7 @@
 
 ---
 
-# 使った技術
+# 触れた技術
 
 * docker
 * ruby
@@ -17,7 +17,7 @@
 * registrator
 * buildpack(like)
   
-## ruby初心者でもここまでできちゃう時代
+#### ruby初心者でもここまでできちゃう時代
 
 ---
 
