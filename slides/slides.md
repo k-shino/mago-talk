@@ -24,7 +24,7 @@
 * サーバ借りるところから
 * AWS EC2を使用
 * OSはubuntu
-* セキュリティルール インバウンドのHTTP通信を許可
+* セキュリティルール インバウンドのHTTP通信, Consul UI(8500)を許可
 
 <img src="./fig1.png" width="70%" \>
 
@@ -97,8 +97,11 @@ $ git push mago-talk master
 ```sh
 $ mago-talk scale web=3
 ```
-
 * <p class="fragment">時々変なのが紛れ込みます</p>
+
+<img src="./mago1.png" width="70%" \>
+
+<img src="./mago2.png" width="70%" class="fragment" \>
 
 ---
 
