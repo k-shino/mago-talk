@@ -26,7 +26,7 @@
 * OSはubuntu
 * セキュリティルール インバウンドのHTTP通信を許可
 
-![Alt Text](./fig1.png)
+<img src="./fig1.png" width="70%" \>
 
 ---
 
@@ -44,7 +44,7 @@ $ ./setup.sh
 * docker PaaS(tetsusat氏作成)のダウンロード
 * mago-talkプログラムのダウンロード
 
-![Alt Text](./fig2.png)
+<img src="./fig2.png" width="70%" \>
 
 ---
 
@@ -86,7 +86,7 @@ $ git push mago-talk master
 * MVCフレームワークとしてSinatraを使用
 * Ajaxでバックグラウンド更新
 
-![Alt Text](./fig4.png)
+<img src="./fig4.png" width="70%" \>
 
 ---
 
