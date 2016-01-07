@@ -30,10 +30,10 @@
 
 # セットアップ
 
-```(.sh)
-wget https://github.com/k-shino/mago-talk/raw/master/setup.sh
-chmod +x ./setup.sh
-./setup.sh
+```sh
+$ wget https://github.com/k-shino/mago-talk/raw/master/setup.sh
+$ chmod +x ./setup.sh
+$ ./setup.sh
 ```
 
 ### やってること
@@ -45,9 +45,16 @@ chmod +x ./setup.sh
 ---
 
 # サービスの起動
-     1コマンド
-     やってること nginx、registratorの起動
-      アーキテクチャも描き始める
+
+```sh
+$ sudo ./raspaas/bootstrap.sh mago-talk
+```
+
+### やってること
+
+* docker PaaSでサービス起動
+ * nginx(LoadBalancer)の起動
+ * registratorの起動
 
 ---
 
