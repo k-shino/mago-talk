@@ -73,9 +73,9 @@ $ git push mago-talk master
 ## やってること
 
 * git push (gitreceiveでフック)
-* pushされたアプリケーションの言語を判断し、ruby環境のdockerイメージを取得 (buildpack-like)
-* dockerイメージ上でアプリケーションの実行環境を構築(bundle install)
-* dockerコンテナ起動、nginxと接続 (registrator, Consul)
+* pushされたアプリケーションの言語を判断し、ruby環境のdockerイメージを取得
+* dockerイメージ上でアプリケーションの実行環境を構築
+* dockerコンテナ起動、nginxと接続
 
 ---
 
