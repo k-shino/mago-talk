@@ -83,42 +83,34 @@ $ sudo ./raspaas/bootstrap.sh mago-talk
 
 ---
 
-# demo
-
- スケール
-     1コマンド
-     docker psも
-
----
-
-# システム全体の絵
-
 ![Alt Text](./fig5.png)
 
 ---
 
- 振り返り イカ背景
+ 振り返り
 
 ---
 
 # 使った技術
-     docker
-     ruby
-     Ajax
-     sinatra
-     docomo API
-     git
-     raspaas
-     nginx
-     consul
-     registrator
-     buildpack(like)
-     ruby初心者でもここまでできちゃう時代
+
+* docker
+* ruby
+* Ajax
+* Sinatra
+* docomo API
+* git
+* raspaas
+* nginx
+* consul
+* registrator
+* buildpack(like)
+  
+## ruby初心者でもここまでできちゃう時代
 
 ---
 
 # イカのせいでアイデア止まりで間に合わなかったこと
-     まばたき
-     音声発話 ドコモで出来そう
-     Q&A対応
 
+* まばたき
+* 音声発話
+* Q&A対応
