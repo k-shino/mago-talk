@@ -8,23 +8,29 @@ require "socket"
 
 set :bind, '0.0.0.0'
 
+## Configuration ######################
+d_api = "376f5479654d35514574463155363475396c4d6661694f6866576e556c487a5a7669356b394a795068472f"
+nic_name = "en0"
+seed_ip1 = '172.17.0.7'
+seed_ip2 = '172.17.0.8'
+init_talk = "こんにちは"
+#######################################
+
 helpers do
   include Rack::Utils; alias_method :h, :escape_html
 end
 
 get '/' do
-	client = Docomoru::Client.new(api_key: "376f5479654d35514574463155363475396c4d6661694f6866576e556c487a5a7669356b394a795068472f")
+	client = Docomoru::Client.new(api_key: d_api)
 
 	ip = Socket.getifaddrs.select{|x|
-	  x.name == "eth0" and x.addr.ipv4?
+	  x.name == nic_name and x.addr.ipv4?
 	}.first.addr.ip_address
 
-	seed1 = '172.17.0.7'
-	seed2 = '172.17.0.8'
-	if seed1.eql?(ip) then
+	if seed_ip1.eql?(ip) then
 		tnum = 30
 		@color = 'pink'
-	elsif	seed2.eql?(ip) then
+	elsif	seed_ip2.eql?(ip) then
 		tnum = 20
 		@color = 'white'
 	else
@@ -32,7 +38,7 @@ get '/' do
 		@color = 'white'
 	end
 
-        response = client.create_dialogue("こんにちは", {"age" => "2","t" => tnum})
+    response = client.create_dialogue(init_talk, {"age" => "30","t" => tnum})
 
    	@title = container = `hostname` || 'unknown'
 	@body = response.body
@@ -41,18 +47,17 @@ end
 
 
 post '/' do
-	client = Docomoru::Client.new(api_key: "376f5479654d35514574463155363475396c4d6661694f6866576e556c487a5a7669356b394a795068472f")
+	client = Docomoru::Client.new(api_key: d_api)
 
         ip = Socket.getifaddrs.select{|x|
-          x.name == "eth0" and x.addr.ipv4?
+          x.name == nic_name and x.addr.ipv4?
         }.first.addr.ip_address
 
-        seed1 = '172.17.0.7'
-        seed2 = '172.17.0.8'
-        if seed1.eql?(ip) then
+
+        if seed_ip1.eql?(ip) then
                 tnum = 30
                 @color = 'pink'
-        elsif   seed2.eql?(ip) then
+        elsif   seed_ip2.eql?(ip) then
                 tnum = 20
                 @color = 'white'
         else
@@ -65,9 +70,5 @@ post '/' do
     @title = container = `hostname` || 'unknown'
     @body = response.body
     erb :index
-#  erb %{
-#    <p>こんにちは，<%= h params[:name] %>さん！</p>
-#    <a href='/'>戻る</a>
-#  }
 end
 
