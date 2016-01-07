@@ -41,8 +41,7 @@ $ ./setup.sh
 ## やってること
 
 * dockerのインストール
-* docker PaaS(tetsusat氏作成)のダウンロード
-* mago-talkプログラムのダウンロード
+* docker PaaS(tetsusat氏作成), mago-talk APPのダウンロード
 
 <img src="./fig2.png" width="70%" \>
 
