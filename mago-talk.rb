@@ -29,17 +29,17 @@ get '/' do
 	}.first.addr.ip_address
 
 	if seed_ip1.eql?(ip) then
-		tnum = 30
+		@tnum = 30
 		@color = 'pink'
 	elsif	seed_ip2.eql?(ip) then
-		tnum = 20
+		@tnum = 20
 		@color = 'white'
 	else
-		tnum = 0
+		@tnum = 0
 		@color = 'white'
 	end
 
-    response = client.create_dialogue(init_talk, {"age" => "30","t" => tnum})
+    response = client.create_dialogue(init_talk, {"age" => "30","t" => @tnum})
 
    	@title = container = `hostname` || 'unknown'
 	@body = response.body
@@ -57,19 +57,7 @@ post '/comment' do
           x.name == nic_name and x.addr.ipv4?
         }.first.addr.ip_address
 
-
-        if seed_ip1.eql?(ip) then
-                tnum = 30
-                @color = 'pink'
-        elsif   seed_ip2.eql?(ip) then
-                tnum = 20
-                @color = 'white'
-        else
-                tnum = 0
-                @color = 'white'
-        end
-
-	response = client.create_dialogue(params[:body], {"mode" => params[:mode], "context" => params[:context], "t" => tnum})
+	response = client.create_dialogue(params[:body], {"mode" => params[:mode], "context" => params[:context], "t" => params[:tnum]})
 
     @title = container = `hostname` || 'unknown'
     @body = response.body

@@ -8,16 +8,13 @@
         <input type="hidden" id="mode" name="mode" value= "<%= @body["mode"] %>">
         <input type="hidden" id="context" name="context" value= "<%= @body["context"] %>">
     </div>
+        <input type="hidden" id="tnum" name="tnum" value= "<%= @tnum %>">
 </div>
-
-<%= @ip %>
+<br/>
 <div class="balloon" id="comment">
 <%= @body["utt"] %>
 </div>
 <img src="logo.png" width="400px" style="background-color:<%= @color %>;" />
-<div id="comments">
-<p>json : <%= escape_html @comment %></p>
-</div>
 
 <br/><br/>
 
@@ -30,6 +27,7 @@
         var comment = $("#message").val();
         var mode = $("#mode").val();
         var context = $("#context").val();
+        var tnum = $("#tnum").val();
 
         var request = $.ajax({
           type: "POST",
@@ -37,7 +35,8 @@
           data: {
             body: comment,
             mode:  mode,
-            context:  context
+            context:  context,
+            tnum:   tnum
           },
           dataType: 'json'
         }).done(function(res){
