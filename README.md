@@ -32,8 +32,6 @@ mago-talk create
 git push mago-talk master
 ```
 
-## Contribution
-
 ## Licence
 
 MIT
