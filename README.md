@@ -1,7 +1,7 @@
 mago-talk
 ====
 
-mago-talk is scalable MAGONIA-talk app on [tetsusat/Raspaas](https://github.com/tetsusat/raspaas)
+mago-talk is scalable chatting application with MAGONIA-Logo on [tetsusat/Raspaas](https://github.com/tetsusat/raspaas)
 ![MAGONIA](./public/logo.png)
 
 
