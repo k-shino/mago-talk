@@ -1,6 +1,21 @@
-# mago-talk
+mago-talk
+====
 
-## Installing on raspaas
+Overview
+
+Scalable MAGONIA-talk app on [tetsusat/Raspaas](https://github.com/tetsusat/raspaas)
+
+## Description
+
+## Demo
+
+## VS. 
+
+## Requirement
+
+## Usage
+
+## Install
 
 ```
 wget https://github.com/k-shino/mago-talk/raw/master/setup.sh
@@ -12,3 +27,18 @@ cd ./mago-talk/
 mago-talk create
 git push mago-talk master
 ```
+
+## Contribution
+
+## Licence
+
+MIT
+
+## Author
+
+[k-shino](https://github.com/k-shino)
+
+
+## Installing on raspaas
+
+
