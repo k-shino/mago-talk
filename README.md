@@ -7,6 +7,8 @@ mago-talk is scalable chatting application with MAGONIA-Logo on [tetsusat/Raspaa
 
 ## Description
 
+
+
 ## Requirement
 
 Ubuntu 14.x
