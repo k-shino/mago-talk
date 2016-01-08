@@ -11,9 +11,11 @@ mago-talk is scalable chatting application with MAGONIA-Logo on [tetsusat/Raspaa
 
 Ubuntu 14.x
 
+Port : 80, 8500
+
 ## Usage
 
-Access http://server-address/mago-talk/
+After installation, access http://server-address/mago-talk/
 
 **don't forget to enter the last "/"**
 
