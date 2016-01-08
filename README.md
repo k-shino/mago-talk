@@ -37,8 +37,3 @@ MIT
 ## Author
 
 [k-shino](https://github.com/k-shino)
-
-
-## Installing on raspaas
-
-
