@@ -7,13 +7,15 @@ mago-talk is scalable chatting application with MAGONIA-Logo on [tetsusat/Raspaa
 
 ## Description
 
-## Demo
-
 ## Requirement
 
 Ubuntu 14.x
 
 ## Usage
+
+Access http://server-address/mago-talk/
+
+**don't forget to enter the last "/"**
 
 ## Install
 
