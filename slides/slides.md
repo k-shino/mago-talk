@@ -38,12 +38,12 @@ $ chmod +x ./setup.sh
 $ ./setup.sh
 ```
 
-## やってること
+## <p class="fragment">やってること</p>
 
-* dockerのインストール
-* docker PaaS(tetsusat氏作成), mago-talk APPのダウンロード
+* <p class="fragment">dockerのインストール</p>
+* <p class="fragment">docker PaaS(tetsusat氏作成), mago-talk APPのダウンロード</p>
 
-<img src="./fig2.png" width="70%" \>
+<img src="./fig2.png" width="70%" class="fragment" \>
 
 ---
 
@@ -53,11 +53,11 @@ $ ./setup.sh
 $ sudo ./raspaas/bootstrap.sh mago-talk
 ```
 
-## やってること
+## <p class="fragment">やってること</p>
 
-* docker PaaSでサービス起動
+* <p class="fragment">docker PaaSでサービス起動</p>
 
-<img src="./fig3.png" width="70%" \>
+<img src="./fig3.png" width="70%" class="fragment" \>
 
 ---
 
@@ -69,12 +69,12 @@ $ mago-talk create
 $ git push mago-talk master
 ```
 
-## やってること
+## <p class="fragment">やってること</p>
 
-* git push (gitreceiveでフック)
-* pushされたアプリケーションの言語を判断し、ruby環境のdockerイメージを取得
-* dockerイメージ上でアプリケーションの実行環境を構築
-* dockerコンテナ起動、nginxと接続
+* <p class="fragment">git push (gitreceiveでフック)</p>
+* <p class="fragment">pushされたアプリケーションの言語を判断し、ruby環境のdockerイメージを取得</p>
+* <p class="fragment">dockerイメージ上でアプリケーションの実行環境を構築</p>
+* <p class="fragment">dockerコンテナ起動、nginxと接続</p>
 
 ---
 
