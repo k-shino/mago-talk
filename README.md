@@ -9,9 +9,9 @@ mago-talk is scalable MAGONIA-talk app on [tetsusat/Raspaas](https://github.com/
 
 ## Demo
 
-## VS. 
-
 ## Requirement
+
+Ubuntu 14.x
 
 ## Usage
 
